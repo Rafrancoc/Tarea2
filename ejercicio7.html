@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+   }
+   nav {
+     position: absolute;
+     z-index: 10;
+     left: 0;
+     right: 0;
+     top: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     padding: 0 5%;
+     height: 100px;
+     background-color: #242526;
+   }
+   nav .logo {
+     float: left;
+     align-items: center;
+     font-size: 24px;
+     color: #ffffff;
+     font-weight: bold;
+     text-transform: uppercase;
+     }
+   nav .list {
+     float: right;
+     padding: 0;
+     margin: 0;
+     width: 60%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     }
+   nav .list li {
+     list-style: none;
+     }
+   nav .list a {
+     display: block;
+     text-transform: uppercase;
+     padding: 15px;
+     font-size: 16px;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+     }
+   nav .list a:hover {
+     border-bottom: 4px solid #675bf9;
+     }
+   #toggle {
+     position: absolute;
+     top: -100px
+     }
+   nav .icon-bars {
+     display: none;
+     position: absolute;
+     right: 5%;
+     top: 50%;
+     transform: translateY(-50%);
+     }
+   nav .icon-bars .line {
+     width: 30px;
+     height: 5px;
+     background-color: #ffffff;
+     margin: 5px;
+     border-radius: 3px;
+     transition: all .3s ease-in-out;
+    }
+     nav .logo {
+          float: none;
+          width: auto;
+          justify-content: center;
+         }
+   
+     nav :checked ~ .list {
+          bottom: 0;
+         }
+     nav .icon-bars {
+          display: block;
+     }
+
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<nav>
+                <input type="checkbox" id="toggle">
+                <div class="logo">
+                    MENU
+                </div>
+				<ul class="nav">
+					<li><a href="">Inicio</a>
+                        <ul>
+                            <li><a href="index.html">Regresar</a></li>
+                        </ul>
+                    </li>
+					<li><a href="">Servicios</a>
+						<ul>
+							<li><a href="">Mantenimiento</a></li>
+							<li><a href="">Reparación</a></li>
+							<li><a href="">Asistencia</a></li>
+							<li><a href="">Soporte</a>
+								<ul>
+									<li><a href="">Red</a></li>
+									<li><a href="">Técnico</a></li>
+									<li><a href="">Facturación</a></li>
+									<li><a href="">Ventas</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="">Acerca de</a>
+						<ul>
+							<li><a href="">Nosotros</a></li>
+							<li><a href="">Nuestro productos</a></li>
+							<li><a href="">Nuestro personal</a></li>
+							<li><a href="">Nuestros clientes</a></li>
+						</ul>
+					</li>
+					<li><a href="">Contacto</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+</html>

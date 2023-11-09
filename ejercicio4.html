@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj analógico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #2196f3 50%, #282a35 50%);
+}
+
+.clock {
+    background: #282a35;
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: 15px solid #242931;
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2),
+        inset 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    background-color: #ffffff;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    transform-origin: bottom;
+}
+
+.hour {
+    height: 60px;
+    width: 10px;
+    top: 100px;
+}
+
+.minute {
+    height: 80px;
+    width: 5px;
+    top: 80px;
+}
+
+.seconds {
+    height: 90px;
+    width: 3px;
+    top: 70px;
+    background-color: #2196f3;
+}
+    </style>
+     <header class="header">
+        <a href="index.html">
+            <button class="boton">Regresar</button>
+        </a>
+    </header>
+<div class="clock">
+    <div class="hour hand" id="hour"></div>
+    <div class="minute hand" id="minute"></div>
+    <div class="seconds hand" id="seconds"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
