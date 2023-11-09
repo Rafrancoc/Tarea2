@@ -1,0 +1,135 @@
+<html>
+<head>
+     <title>Temporizador</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/timer.jquery.min.js"></script>
+    
+    </head>
+    <body>
+        <header>
+            <h1>QUITS GAME</h1>
+        </header>
+        <style>
+            *{
+                box-sizing: border-box;
+                font-family: 'Balsamic Sans';
+            }
+        header{
+            text-align: center;
+            background: #000;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .container{
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+        section{
+            border: 2px solid #5624d0;
+            border-radius: 7px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        label{
+            display: block;
+            padding: 7px;
+            border-radius: 7px;
+            cursor: pointer;
+            border: 1px dashed #ccc;
+            
+            margin-bottom: 3px;
+        }
+        button{
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding: 10px;
+            background-color: #76d7c8;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        button:hover{
+            background: #000;
+            color: #fff;
+        }
+        h2{
+            text-align: center;
+        }
+        #resultado{
+            font-size: 30px;
+            color: darkred;
+        }
+        </style>
+        <div class="container">
+            <section id="p0">
+                <h3>1. ¿Cuál es la capital de Italia?</h3>
+                    <label>
+                        <input type="radio" value="1" name="p0" onclick="respuesta(0,this)"> Turín
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="p0" onclick="respuesta(0,this)"> Nápoles
+                    </label>
+                    <label>
+                        <input type="radio" value="3" name="p0" onclick="respuesta(0,this)"> Roma
+                    </label>
+            </section>
+            <section id="p1">
+                <h3>2. ¿Cuál es la capital de Noruega?</h3>
+                    <label>
+                        <input type="radio" value="1" name="p1" onclick="respuesta(1,this)"> Oslo
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="p1" onclick="respuesta(1,this)"> Bucarest
+                    </label>
+                    <label>
+                        <input type="radio" value="3" name="p1" onclick="respuesta(1,this)"> Madrid
+                    </label>
+            </section>
+            <section id="p2">
+                <h3>3. ¿Cuál es la capital de Perú?</h3>
+                    <label>
+                        <input type="radio" value="1" name="p2" onclick="respuesta(2,this)"> La Paz
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="p2" onclick="respuesta(2,this)"> Ciudad del Perú
+                    </label>
+                    <label>
+                        <input type="radio" value="3" name="p2" onclick="respuesta(2,this)"> Lima
+                    </label>
+            </section>
+            <section id="p3">
+                <h3>4. ¿Cuál es la capital de Suecia?</h3>
+                    <label>
+                        <input type="radio" value="1" name="p3" onclick="respuesta(3,this)"> Gotemburgo
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="p3" onclick="respuesta(3,this)"> Estocolmo
+                    </label>
+                    <label>
+                        <input type="radio" value="3" name="p3" onclick="respuesta(3,this)"> Lund
+                    </label>
+            </section>
+            <section id="p4">
+                <h3>5. ¿Cuál es la capital de Canadá?</h3>
+                    <label>
+                        <input type="radio" value="1" name="p4" onclick="respuesta(4,this)"> Candberra
+                    </label>
+                    <label>
+                        <input type="radio" value="2" name="p4" onclick="respuesta(4,this)"> Toronto
+                    </label>
+                    <label>
+                        <input type="radio" value="3" name="p4" onclick="respuesta(4,this)"> Ottawa
+                    </label>
+            </section>
+
+            <button onclick="corregir()">CORREGIR</button>
+            <a href="index.html">
+                <button>REGRESAR</button>
+            </a>
+            <h2>Cantidad de aciertos: <span id="resultado"></span></h2>
+        </div>
+        <script src="js/script10.js"></script>
+    </body>
+</html>
